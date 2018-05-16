@@ -1,0 +1,64 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.post-list{
+	display: grid;
+	grid-template-columns: repeat(3,minmax(100px,293px));
+	justify-content: center;
+	grid-gap: 28px;
+}
+.post{
+	position: relative;
+	display: block;
+	cursor: pointer;
+}
+.post-image{
+	margin: 0;
+}
+.post:hover .post-overlay{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.post-image img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	vertical-align: top;
+}
+.post-overlay{
+	display: none;
+	background-color: rgba(0,0,0,.5);
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	text-align: center;
+}
+.post-overlay span{
+	color: #fff;
+}
+
+.fa-like-icon:before{
+	font-family: FontAwesome;
+	font-style: normal;
+    color: #fff;
+    font-size: 16px;
+    padding-right: 10px;
+    content: "\f164";
+}
+.fa-heart-icon:before{
+	font-family: FontAwesome;
+	font-style: normal;
+    color: #fff;
+    font-size: 16px;
+    padding: 8px;
+    content: "\f004";
+}
+@media screen and (max-width: 768px){
+	.post-list{
+		grid-gap: 3px;
+	}
+}
